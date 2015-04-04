@@ -1,8 +1,6 @@
 package com.c4q.davisroman;
 
-
 public class Main {
-
 
     public static com.c4q.davisroman.Principal createHierarchy(){
         com.c4q.davisroman.Principal judy          = new Principal("judy");
