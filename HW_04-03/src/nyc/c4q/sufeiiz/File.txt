@@ -1,0 +1,3 @@
+This is a sample file for the distribution calculator class.
+To test if everything works okay.
+1234 test.
