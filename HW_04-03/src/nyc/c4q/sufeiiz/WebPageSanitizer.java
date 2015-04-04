@@ -26,17 +26,17 @@ public class WebPageSanitizer {
     public static String sanitize(String html) {
 
         // search for "<script" instead of "<script>" because there are "<script src>"
-        String start = "<script", end = "</script>", delete;
-        int count, index1, index2;
+        String startTag = "<script", endTag = "</script>", delete;
+        int count, startIndex, endIndex;
 
-        count = HTTP.countWord(html, start);
+        count = HTTP.countWord(html, startTag);
 
         // will loop the exact amount of times "<script" appears in html
         for (int i=0; i<count; i++) {
-            index1 = html.indexOf(start);
-            index2 = html.indexOf(end, index1)+9;
+            startIndex = html.indexOf(startTag);
+            endIndex = html.indexOf(endTag, startIndex) + 9; // 9 = length of endTag
 
-            delete = html.substring(index1, index2);
+            delete = html.substring(startIndex, endIndex);
 
             html = html.replace(delete, "");
         }
