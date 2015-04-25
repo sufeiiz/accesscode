@@ -8,5 +8,5 @@ public interface Refillable {
         void refill();
         boolean isEmpty();
         int getGas();
-        void use(int distance);
+        void use(int anything);
     }

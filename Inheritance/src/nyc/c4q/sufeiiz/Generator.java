@@ -1,7 +1,5 @@
 package nyc.c4q.sufeiiz;
 
-import java.util.ArrayList;
-import java.util.Random;
 
 /**
  * Created by sufeizhao on 4/25/15.
