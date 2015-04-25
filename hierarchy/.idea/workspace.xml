@@ -182,7 +182,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../weatherclock" />
     <property name="FullScreen" value="true" />
   </component>
   <component name="RunManager" selected="Application.Main">
