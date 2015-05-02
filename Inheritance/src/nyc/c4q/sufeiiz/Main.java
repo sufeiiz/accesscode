@@ -13,28 +13,22 @@ public class Main {
         vehicles.add(new Generator());
         vehicles.add(new Generator());
 
-        for(int i=0; i<5; i++)
-        {
+        for(int i=0; i<5; i++) {
             useVehicles(vehicles);
             refillVehicles(vehicles);
         }
     }
 
-    static void useVehicles(ArrayList<Refillable> vehicles)
-    {
-        for (Refillable vehicle : vehicles)
-        {
+    static void useVehicles(ArrayList<Refillable> vehicles) {
+        for (Refillable vehicle : vehicles) {
             vehicle.use(new Random().nextInt(10));
             System.out.println("Gas remaining: " + vehicle.getGas());
         }
     }
 
-    static void refillVehicles(ArrayList<Refillable> vehicles)
-    {
-        for (Refillable vehicle : vehicles)
-        {
-            if(vehicle.isEmpty())
-            {
+    static void refillVehicles(ArrayList<Refillable> vehicles) {
+        for (Refillable vehicle : vehicles) {
+            if(vehicle.isEmpty()) {
                 vehicle.refill();
                 System.out.println("Refilling...");
             }
