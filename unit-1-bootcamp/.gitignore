@@ -1,4 +1,5 @@
-out/
-.idea/
 *.class
+.idea/
 .DS_Store
+out/
+
