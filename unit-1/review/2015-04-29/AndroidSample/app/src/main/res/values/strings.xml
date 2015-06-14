@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidSample</string>
+    <string name="button_text">This is a button!</string>
+    <string name="button2_text">Launch via explicit</string>
+    <string name="first_button_text">I clicked the first button</string>
+    <string name="second_button_text">I clicked the second button</string>
+</resources>

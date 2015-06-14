@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nyc.c4q.TileActivity"
+    android:id="@+id/activity_tile"
+    >
+
+    <LinearLayout
+        android:id="@+id/leftSide"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/redView"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:background="#ffff0000"
+            android:layout_weight="40"/>
+        <View
+            android:id="@+id/greenView"
+            android:layout_weight="60"
+            android:background="#ff00ff00"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rightSide"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/yellowView"
+            android:layout_weight="33"
+            android:background="#ffffff00"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <View
+            android:id="@+id/whiteView"
+            android:layout_weight="44"
+            android:background="#ffffffff"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+        <View
+            android:id="@+id/blueView"
+            android:layout_weight="22"
+            android:background="#ff0000ff"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+    </LinearLayout>
+</LinearLayout>
