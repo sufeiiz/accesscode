@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <EditTextPreference
+            android:key="pref_size"
+            android:title="Pref Font Size"
+            android:inputType="number"
+            android:summary="Set font size"
+            android:defaultValue="16dp" />
+
+
+</PreferenceScreen>
