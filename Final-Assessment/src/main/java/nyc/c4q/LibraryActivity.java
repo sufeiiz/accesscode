@@ -37,6 +37,8 @@ public class LibraryActivity extends Activity {
         bhelper = BooksSQLiteHelper.getInstance(LibraryActivity.this);
         mhelper = MembersSQLiteHelper.getInstance(LibraryActivity.this);
 
+        //TODO if (!helpepr.hasData()) the populate
+
         // Load Books to Database
         new AsyncTask<Void, Void, List<Books>>(){
             @Override
@@ -44,7 +46,7 @@ public class LibraryActivity extends Activity {
                 List<Books> booklist = new ArrayList<>();
 
                 try {
-                    JSONArray books = new JSONArray(loadJson("books"));
+                    JSONArray books = new JSONArray(loadJson("books.json"));
 
                     for (int i = 0; i < books.length(); i++) {
                         JSONObject book = books.getJSONObject(i);
@@ -88,7 +90,7 @@ public class LibraryActivity extends Activity {
                 List<Members> memberlist = new ArrayList<>();
 
                 try {
-                    JSONArray members = new JSONArray(loadJson("member"));
+                    JSONArray members = new JSONArray(loadJson("members.json"));
 
                     for (int i = 0; i < members.length(); i++) {
                         JSONObject member = members.getJSONObject(i);
@@ -231,30 +233,16 @@ public class LibraryActivity extends Activity {
     public String loadJson(String file) {
         String json = null;
 
-        if (file.equals("books")) {
-            try {
-                InputStream is = this.getAssets().open("books.json");
-                int size = is.available();
-                byte[] buffer = new byte[size];
-                is.read(buffer);
-                is.close();
-                json = new String(buffer, "UTF-8");
-            } catch (IOException ex) {
-                ex.printStackTrace();
-                return null;
-            }
-        } else {
-            try {
-                InputStream is = this.getAssets().open("members.json");
-                int size = is.available();
-                byte[] buffer = new byte[size];
-                is.read(buffer);
-                is.close();
-                json = new String(buffer, "UTF-8");
-            } catch (IOException ex) {
-                ex.printStackTrace();
-                return null;
-            }
+        try {
+            InputStream is = this.getAssets().open(file);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
         }
 
         return json;

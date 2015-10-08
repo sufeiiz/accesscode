@@ -140,30 +140,30 @@ public class BooksSQLiteHelper extends SQLiteOpenHelper {
 
         while (cursor.moveToNext()) {
             if (cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_CHECKEDOUT)) > 0) {
-                books.add(new Books(cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_ID)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_TITLE)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_AUTHOR)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_ISBN)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_ISBN13)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_PUBLISHER)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_PUBLISH_YEAR)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_CHECKEDOUT)) > 0,
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_CHECKEDOUTBY)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_CHECKOUT_DATEYEAR)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_CHECKOUT_DATEMONTH)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_CHECKOUT_DATEDAY)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_DUEDATE_YEAR)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_DUEDATE_MONTH)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_DUEDATE_DAY))));
+                books.add(new Books(cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getInt(6),
+                        cursor.getInt(7) > 0,
+                        cursor.getInt(8),
+                        cursor.getInt(9),
+                        cursor.getInt(10),
+                        cursor.getInt(11),
+                        cursor.getInt(12),
+                        cursor.getInt(13),
+                        cursor.getInt(14)));
             } else {
-                books.add(new Books(cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_ID)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_TITLE)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_AUTHOR)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_ISBN)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_ISBN13)),
-                        cursor.getString(cursor.getColumnIndex(DataEntry.COLUMN_PUBLISHER)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_PUBLISH_YEAR)),
-                        cursor.getInt(cursor.getColumnIndex(DataEntry.COLUMN_CHECKEDOUT)) > 0 ));
+                books.add(new Books(cursor.getInt(0),
+                        cursor.getString(1),
+                        cursor.getString(2),
+                        cursor.getString(3),
+                        cursor.getString(4),
+                        cursor.getString(5),
+                        cursor.getInt(6),
+                        cursor.getInt(7) > 0 ));
             }
         }
 
