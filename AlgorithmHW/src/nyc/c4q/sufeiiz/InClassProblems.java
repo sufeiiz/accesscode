@@ -1,5 +1,6 @@
 package nyc.c4q.sufeiiz;
 
+import java.util.HashMap;
 import java.util.Queue;
 import java.util.Random;
 import java.util.Stack;
@@ -8,6 +9,7 @@ import java.util.Stack;
  * Created by sufeizhao on 10/15/15.
  */
 public class InClassProblems {
+
     /* Stream Problem - asked in interview
        Given a stream of numbers, generate a random number from the stream. You are allowed to use
        only O(1) space and the input is in the form of stream, so can’t store the previously seen numbers. */
@@ -37,7 +39,7 @@ public class InClassProblems {
     /* Recursive Queue Reversal
        Given a queue, reverse it using recursion. Use of any loop constructs like while, for..etc is not
        allowed. We can only use the following ADT functions on Queue Q: */
-    public static Queue reverseQueue(Queue queue) {}
+//    public static Queue reverseQueue(Queue queue) {}
 
     /* Implement Merge Sort */
 
@@ -45,11 +47,11 @@ public class InClassProblems {
        1. Given a string, find the length of the longest substring without repeating characters. For example,
        the longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3. For
        "bbbbb" the longest substring is "b", with the length of 1. */
-    public static String longestSubstring(String string) {
-        String substring;
-
-
-    }
+//    public static String longestSubstring(String string) {
+//        String substring;
+//
+//
+//    }
 
     /* 2. Given a string, find the longest substring that contains only k unique characters. For example, given
             "abcbbbbcccbdddadacb"
