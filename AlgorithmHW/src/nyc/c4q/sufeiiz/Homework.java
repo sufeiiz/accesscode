@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class Homework {
     // Show that X^62 can be computed with only 8 multiplications
+    // 62 can be square rooted 8 times?
 
     // Majority element complexity: O(N)
     public static boolean isMajorityElement(Integer[] array, int num) {
