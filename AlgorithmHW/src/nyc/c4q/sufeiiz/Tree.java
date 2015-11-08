@@ -143,11 +143,32 @@ public class Tree {
                 insert(root.right, newData);
     }
 
+    public static int findHeight(Node root) {
+        if (root == null || (root.left == null && root.right == null))
+            return 0;
+        else {
+            int heightLeft = 1 + findHeight(root.left);
+            int heightRight = 1 + findHeight(root.right);
+
+            return Math.max(heightLeft, heightRight);
+        }
+    }
+
+    public static boolean isBST(Node root) {
+        if (root.left != null)
+            return isBST(root.left) || root.left.num <= root.num;
+        else if (root.right != null)
+            return isBST(root.right) || root.right.num >= root.num;
+        else
+            return isBST(root.left) || isBST(root.right);
+    }
+
     public static void main(String[] args) {
         Node node = binaryTree(expression);
         printPostfix(node);
         printPrefix(node);
         printInfix(node);
+        System.out.println(findHeight(node));
     }
 
 }
@@ -156,6 +177,7 @@ class Node {
     Node left;
     Node right;
     String symbol;
+    int num;
 
     public Node(String s) {
         this.symbol = s;
