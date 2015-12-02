@@ -1,6 +1,7 @@
 package c4q.nyc.sufeiiz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by sufeizhao on 12/1/15.
@@ -10,16 +11,17 @@ public class MissingNum {
     // Write an algorithm to figure out what the number is and what position is missing.
 
     public static int missingNum(int[] nums) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
-
-        for (int i = 1; i <= 100; i++) {
-            list.add(i);
-        }
+        boolean[] list = new boolean[100];
 
         for (int num : nums) {
-            list.remove(list.indexOf(num));
+            list[num - 1] = true;
         }
 
-        return list.get(0);
+        for (int i = 0; i < list.length; i++) {
+            if (!list[i])
+                return i + 1;
+        }
+        
+        return -1;
     }
 }
