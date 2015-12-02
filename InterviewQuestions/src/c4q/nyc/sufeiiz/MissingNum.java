@@ -1,5 +1,7 @@
 package c4q.nyc.sufeiiz;
 
+import java.util.ArrayList;
+
 /**
  * Created by sufeizhao on 12/1/15.
  */
@@ -8,10 +10,22 @@ public class MissingNum {
     // Write an algorithm to figure out what the number is and what position is missing.
 
     public static int missingNum(int[] nums) {
-        int index = -1;
+        ArrayList<Integer> list = new ArrayList<Integer>();
 
-      
+        for (int i = 1; i <= 6; i++) {
+            list.add(i);
+        }
 
-        return index;
+        for (int num : nums) {
+            list.remove(list.indexOf(num));
+        }
+
+        return list.get(0);
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {3,4,5,1,2};
+
+        System.out.println(missingNum(nums) + "");
     }
 }
