@@ -12,7 +12,7 @@ public class MissingNum {
     public static int missingNum(int[] nums) {
         ArrayList<Integer> list = new ArrayList<Integer>();
 
-        for (int i = 1; i <= 6; i++) {
+        for (int i = 1; i <= 100; i++) {
             list.add(i);
         }
 
@@ -21,11 +21,5 @@ public class MissingNum {
         }
 
         return list.get(0);
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {3,4,5,1,2};
-
-        System.out.println(missingNum(nums) + "");
     }
 }
