@@ -10,10 +10,7 @@ public class MissingNum {
     public static int missingNum(int[] nums) {
         int index = -1;
 
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0)
-                index = i;
-        }
+      
 
         return index;
     }
