@@ -21,7 +21,7 @@ public class MissingNum {
             if (!list[i])
                 return i + 1;
         }
-        
+
         return -1;
     }
 }
